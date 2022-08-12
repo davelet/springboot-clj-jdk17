@@ -1,11 +1,15 @@
-(ns org.brinman2002.app.BrandonApplication)
+(ns org.brinman2002.app.BrandonApplication
+    (:import 
+        (org.springframework.boot.autoconfigure SpringBootApplication)
+        (org.springframework.boot SpringApplication)
+    ))
 
-(gen-class 
-  :name ^{org.springframework.boot.autoconfigure.SpringBootApplication []} org.brinman2002.app.BrandonApplication
-  :main  true)
+(gen-class
+  :name ^{SpringBootApplication []} org.brinman2002.app.BrandonApplication
+  :main true
+)
 
 (defn -main
   [  ]
-  (org.springframework.boot.SpringApplication/run (Class/forName "org.brinman2002.app.BrandonApplication") (into-array String '())))
-  
-  
+    (SpringApplication/run (Class/forName "org.brinman2002.app.BrandonApplication") (into-array String '()))
+)
